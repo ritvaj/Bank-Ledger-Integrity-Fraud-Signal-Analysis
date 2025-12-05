@@ -59,10 +59,10 @@ Alongside the business framing, the project serves as an end-to-end application 
 - **Feature Engineering:** Velocity rules, mismatch patterns, balance signals, mule behavior indicators  
 - **Fraud Analytics:** Threshold testing, precision–recall evaluation, high-risk account identification
 
+---
 
 ## 📁 Repository Structure
 
-```
 transaction-behavior-analytics/
 │
 ├── python/
@@ -99,10 +99,8 @@ transaction-behavior-analytics/
 │   │   └── top10_high_risk_accounts.csv  
 │
 └── README.md
+
 ```
-
-
----
 
 ## 📊 Visual Gallery (EDA)
 
@@ -223,7 +221,6 @@ outputs/tables/top10_high_risk_accounts.csv
 
 The following visuals summarize how the engineered behavioral features translate into risk separation, scoring quality, and threshold performance.
 
----
 
 ### 🔄 Mismatch Rate vs Destination Activity
 
@@ -231,15 +228,6 @@ The following visuals summarize how the engineered behavioral features translate
   <img src="outputs/figures/04_Mismatch_Rate_vs_Destination_Activity_Level.png" width="650">
 </p>
 
-**Insight:**  
-Destination mismatch rates increase sharply as receiver activity rises.  
-Even single-inbound transactions show moderate anomaly levels, but when a destination collects **2–4 inbound payments within the same hour**, mismatch rates spike dramatically.
-
-This pattern aligns with **mule account behavior**, where funds are aggregated rapidly from multiple unrelated sources.  
-Although higher-activity buckets have smaller sample sizes, the overall upward trend is clear:  
-**abnormal destination-side behavior is one of the strongest early fraud signals in the dataset.**
-
----
 
 ### 🕵️ Mule Score Density — Fraud vs Non-Fraud
 
@@ -247,12 +235,6 @@ Although higher-activity buckets have smaller sample sizes, the overall upward t
   <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_Fraud.png" width="650">
 </p>
 
-**Insight:**  
-Fraudulent transactions consistently show **higher mule-scores**, while legitimate users cluster tightly near **zero**.  
-The fraud density curve exhibits a **clear right-shift**, reflecting behaviors such as multiple inbound sends, rapid aggregation, and short-lived receiver accounts.  
-High mule scores are extremely rare among normal users, making this a **highly reliable behavioral risk indicator**.
-
----
 
 ### 🔐 Fraud Signal Score Distribution — Fraud vs Non-Fraud
 
@@ -260,18 +242,43 @@ High mule scores are extremely rare among normal users, making this a **highly r
   <img src="outputs/figures/07_FraudScore_fraud_vs_nonfraud.png" width="650">
 </p>
 
-**Insight:**  
-Fraud transactions cluster between **1–3**, while non-fraud behavior is concentrated around **0–1**.  
-Despite some overlap (expected in real systems), fraud shows a pronounced **right-shift** and heavier mid-score tail.  
-This validates that the combined rule-based signals capture **meaningful anomaly structure** from behavioral patterns.
-
----
 
 ### 🎯 Precision–Recall Curve (Threshold Evaluation)
 
 <p align="center">
   <img src="outputs/figures/precision_recall_curve.png" width="650">
 </p>
+
+## 📊 Key Insights
+
+### 1. Behavioral signals clearly separate fraud from normal activity  
+Mismatch rules, velocity spikes, and mule-like aggregation consistently push fraud transactions to higher risk scores — even without ML.
+
+### 2. Mule patterns are the strongest fraud indicators  
+Fraud accounts show rapid inbound aggregation, pass-through flows, and short-term velocity bursts.  
+These behaviors are rare in normal users → high-value operational flags.
+
+### 3. Destination-side activity exposes abnormal behavior  
+Mismatch rates jump when receivers get multiple inbound payments in short windows — a classic mule consolidation pattern.
+
+### 4. Rule-based scoring improves detection efficiently  
+With only **0.13% fraud**, precision stays low (expected), but the rule-based Fraud Signal Score still ranks fraud earlier, improves recall, and gives lift over random checks.  
+This makes it useful for **queue triage and ops cost reduction** before introducing ML.
+
+### 5. A small cluster of accounts drives most risk  
+Cumulative scores highlight a tiny group of accounts repeatedly triggering anomalies — ideal for targeted investigation.
+
+---
+
+### ⚠️ Dataset Context (to set expectations)
+
+PaySim is synthetic and extremely imbalanced:  
+- Fraud = **0.13%**  
+- Many fraud patterns are semi-random  
+- Merchant/receiver roles aren't fully realistic  
+
+Even so, engineered rules still surface meaningful behavior patterns, showing how far **interpretable, low-cost** scoring can go before ML is needed.
+
 
 **Insight:**  
 With fraud occurring only **0.13%** of the time, baseline precision is extremely low — yet the Fraud Signal Score shows **clear ranking power**, producing a meaningful curve instead of noise.  
@@ -298,6 +305,24 @@ While absolute precision is modest (normal for synthetic imbalance), the model d
 - Scale analysis to the full 2M-row PaySim dataset.
 
 ---
+
+## 📚 References
+
+- **PaySim Transaction Simulation Dataset** — Kaggle  
+  https://www.kaggle.com/datasets/ealaxi/paysim1  
+
+- **pandas Documentation** — Data manipulation and feature engineering  
+  https://pandas.pydata.org/docs/
+
+- **NumPy Documentation** — Numerical computing and vectorized operations  
+  https://numpy.org/doc/
+
+- **Matplotlib Documentation** — Plotting and visualization  
+  https://matplotlib.org/stable/contents.html
+
+- **Seaborn Documentation** — Statistical visualizations  
+  https://seaborn.pydata.org/
+
 
 ## 👤 About Me
 
