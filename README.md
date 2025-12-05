@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">Transaction Behavior Analytics & Fraud Signal Modeling</h1>
 
-A fraud-analytics project analyzing 200,000 transaction records to engineer behavioral risk signals, surface anomaly patterns, and evaluate threshold-based detection strategies.  
+A behavioral transaction analysis project on 200,000 records, engineering interpretable risk signals, surfacing anomaly patterns, and evaluating threshold-based detection strategies.  
 Built using Python (NumPy, pandas) to demonstrate how interpretable scoring systems can support cost-efficient, real-time fraud operations before deploying ML models.
 
 ---
