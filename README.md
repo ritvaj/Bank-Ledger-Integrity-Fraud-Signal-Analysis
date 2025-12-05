@@ -11,7 +11,7 @@ Instead of relying solely on ML models, this project explores a **cost-efficient
 ## 💡 Why This Project?
 
 Most fraud-detection research focuses on machine learning models.  
-But real-world fintech teams rely heavily on **behavioral rules, dynamic thresholds, and interpretable signals** — because they are fast, cheap, transparent, and easy to update when fraudsters adapt.
+But real-world fintech teams rely heavily on **behavioral rules, dynamic thresholds, and interpretable signals** — because they are fast, affordable, transparent, and easy to update when fraudsters adapt.
 
 This project frames the problem like a business analyst at a fintech company:
 
