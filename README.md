@@ -32,6 +32,8 @@ It also serves as an end-to-end application of Python, NumPy, pandas, feature en
 ---
 
 ## 📁 Repository Structure
+
+```
 transaction-behavior-analytics/
 │
 ├── python/
@@ -55,7 +57,7 @@ transaction-behavior-analytics/
 │   │   ├── 06_mule_score_fraud_vs_nonfraud.png
 │   │   ├── 07_fraudscore_fraud_vs_nonfraud.png
 │   │   └── precision_recall_curve.png
-│
+│   │
 │   ├── tables/
 │   │   ├── summary_log_amount.csv
 │   │   ├── summary_fraud_vs_nonfraud.csv
@@ -70,6 +72,7 @@ transaction-behavior-analytics/
 │   └── (optional banner or project images)
 │
 └── README.md
+```
 
 
 ---
