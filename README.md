@@ -3,21 +3,18 @@
 </p>
 <h1 align="center">Transaction Behavior Analytics & Fraud Signal Modeling</h1>
 
-A Python-based fraud analytics project analyzing **200,000 simulated financial transactions** to engineer behavioral risk features, surface anomaly patterns, and evaluate threshold-based fraud detection strategies.  
-Instead of relying solely on ML models, this project explores a **cost-efficient, interpretable rule-based fraud scoring system** inspired by real fintech risk operations.
+A fraud-analytics project analyzing 200,000 transaction records to engineer behavioral risk signals, surface anomaly patterns, and evaluate threshold-based detection strategies.  
+Built using Python (NumPy, pandas) to demonstrate how interpretable scoring systems can support cost-efficient, real-time fraud operations before deploying ML models.
 
 ---
 
 ## 💡 Why This Project?
 
-Most fraud-detection research focuses on machine learning models.  
-But real-world fintech teams rely heavily on **behavioral rules, dynamic thresholds, and interpretable signals** — because they are fast, affordable, transparent, and easy to update when fraudsters adapt.
+Fintech payment systems face fast-evolving fraud patterns where attackers exploit behavior — velocity spikes, aggregation bursts, pass-through flows — rather than simple rule violations. Detecting these anomalies early, without relying entirely on costly or opaque ML systems, is a core operational challenge.
 
-This project frames the problem like a business analyst at a fintech company:
+This project examines how far behavioral analytics, engineered features, and interpretable scoring can push fraud detection on their own — before introducing machine learning. It also raises a practical question every fraud-ops team faces: *how much risk coverage can be achieved with transparent, rule-based scoring before the added cost, latency, and governance burden of ML becomes justified?*
 
-> **“How far can we push fraud detection using pure analytics, feature engineering, and interpretable scoring — before using ML?”**
-
-It also serves as an end-to-end application of Python, NumPy, pandas, feature engineering, and exploratory visual analytics on a large transaction dataset.
+Alongside the business framing, the project serves as an end-to-end application of Python (NumPy, pandas), feature engineering, anomaly exploration, and threshold evaluation on a large-scale transaction dataset.
 
 ---
 
