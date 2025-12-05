@@ -18,23 +18,25 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ---
 
-Raw Transactions  
-    ↓
-Cleaning & Preparation  
-    ↓
-Behavioral Feature Engineering  
-    - mismatch rules  
-    - velocity indicators  
-    - balance signals  
-    - mule behavior scoring  
-    ↓
-Exploratory Analytics (EDA)  
-    ↓
-Fraud Signal Score Construction  
-    ↓
-Threshold Evaluation & A/B Testing  
-    ↓
-Insights & High-Risk Account Identification
+ ## 🔄 End-to-End Analysis Pipeline
+ 
+[ Raw Transactions ]
+        ↓
+[ Cleaning & Preparation ]
+        ↓
+[ Behavioral Feature Engineering ]
+        - mismatch signals  
+        - velocity indicators  
+        - balance anomalies  
+        - mule-behavior scoring  
+        ↓
+[ Exploratory Analytics (EDA) ]
+        ↓
+[ Fraud Signal Score (Rule-Based Model) ]
+        ↓
+[ Threshold Evaluation & A/B Testing ]
+        ↓
+[ Insights & High-Risk Account Detection ]
 
 ---
 
@@ -52,7 +54,7 @@ Insights & High-Risk Account Identification
 
 - **Python (NumPy, pandas):** Data cleaning, feature engineering, and anomaly rule construction  
 - **Matplotlib & Seaborn:** Behavioral visualizations, density plots, threshold curves  
-- **Jupyter Notebook:** Iterative development and EDA workflow  
+- **VS Code:** End-to-end script development (ETL → features → EDA → model evaluation)
 - **Data Modeling:** Transaction behavior segmentation, risk-signal construction  
 - **Feature Engineering:** Velocity rules, mismatch patterns, balance signals, mule behavior indicators  
 - **Fraud Analytics:** Threshold testing, precision–recall evaluation, high-risk account identification
