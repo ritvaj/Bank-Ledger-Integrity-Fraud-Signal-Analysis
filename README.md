@@ -182,7 +182,7 @@ outputs/tables/ab_test_results.csv
 ### 🕵️ Mule Score Density — Fraud vs Non-Fraud
 
 <p align="center">
-  <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_fraud.png" width="650">
+  <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_Fraud.png" width="650">
 </p>
 
 **Insight:**  
