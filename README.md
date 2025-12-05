@@ -179,10 +179,27 @@ Tables are provided in:
 outputs/tables/threshold_metrics.csv
 outputs/tables/ab_test_results.csv
 
+### 🕵️ Mule Score Density — Fraud vs Non-Fraud
+
+<p align="center">
+  <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_fraud.png" width="650">
+</p>
+
+**Insight:**  
+Fraudulent transactions consistently show **higher mule-scores**, while legitimate users cluster tightly near **zero**.  
+The fraud density curve exhibits a **clear right-shift**, reflecting behaviors such as:
+
+- multiple inbound sends from unrelated origins,  
+- rapid aggregation of funds,  
+- short-lived receiver accounts.
+
+Percentile cutoffs confirm that **high mule scores are extremely rare among normal users**, making this metric a reliable anchor for identifying risky accounts.  
+This feature becomes a **critical driver** in the final Fraud Signal Score.
+
 ### 📈 Fraud Signal Score Distribution
 
 <p align="center">
-  <img src="outputs/figures/07_fraudscore_fraud_vs_nonfraud.png" width="650">
+  <img src="outputs/figures/07_FraudScore_fraud_vs_nonfraud.png" width="650">
 </p>
 
 **Insight:**  
