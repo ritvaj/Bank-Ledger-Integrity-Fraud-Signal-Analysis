@@ -99,9 +99,9 @@ transaction-behavior-analytics/
 │   │   └── top10_high_risk_accounts.csv  
 │
 └── README.md
-
 ```
 
+```
 ## 📊 Visual Gallery (EDA)
 
 Exploratory analysis of transaction behavior using engineered features:
