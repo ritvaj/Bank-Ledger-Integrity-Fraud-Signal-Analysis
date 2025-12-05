@@ -179,34 +179,54 @@ Tables are provided in:
 outputs/tables/threshold_metrics.csv
 outputs/tables/ab_test_results.csv
 
+
+## 📊 Model Performance Visuals
+
+The following visuals summarize how the engineered behavioral features translate into risk separation, scoring quality, and threshold performance.
+
+---
+
+### 🔄 Destination Activity vs Mismatch Rate
+
+<p align="center">
+  <img src="outputs/figures/04_mismatch_rate_vs_destination_activity_level.png" width="650">
+</p>
+
+**Insight:**  
+Destination mismatch rates increase sharply as receiver activity rises.  
+Even single-inbound transactions show moderate anomaly levels, but when a destination collects **2–4 inbound payments within the same hour**, mismatch rates spike dramatically.
+
+This pattern aligns with **mule account behavior**, where funds are aggregated rapidly from multiple unrelated sources.  
+Although higher-activity buckets have smaller sample sizes, the overall upward trend is clear:  
+**abnormal destination-side behavior is one of the strongest early fraud signals in the dataset.**
+
+---
+
 ### 🕵️ Mule Score Density — Fraud vs Non-Fraud
 
 <p align="center">
-  <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_Fraud.png" width="650">
+  <img src="outputs/figures/06_mule_score_fraud_vs_nonfraud.png" width="650">
 </p>
 
 **Insight:**  
 Fraudulent transactions consistently show **higher mule-scores**, while legitimate users cluster tightly near **zero**.  
-The fraud density curve exhibits a **clear right-shift**, reflecting behaviors such as:
+The fraud density curve exhibits a **clear right-shift**, reflecting behaviors such as multiple inbound sends, rapid aggregation, and short-lived receiver accounts.  
+High mule scores are extremely rare among normal users, making this a **highly reliable behavioral risk indicator**.
 
-- multiple inbound sends from unrelated origins,  
-- rapid aggregation of funds,  
-- short-lived receiver accounts.
+---
 
-Percentile cutoffs confirm that **high mule scores are extremely rare among normal users**, making this metric a reliable anchor for identifying risky accounts.  
-This feature becomes a **critical driver** in the final Fraud Signal Score.
-
-### 📈 Fraud Signal Score Distribution
+### 🔐 Fraud Signal Score Distribution — Fraud vs Non-Fraud
 
 <p align="center">
-  <img src="outputs/figures/07_FraudScore_fraud_vs_nonfraud.png" width="650">
+  <img src="outputs/figures/07_fraudscore_fraud_vs_nonfraud.png" width="650">
 </p>
 
 **Insight:**  
-Fraud transactions consistently score higher on the Fraud Signal Score, clustering between **1–3**, while legitimate traffic sits tightly around **0–1**.  
-The two densities overlap — as expected in real payment systems — but fraud shows a **clear right-shift** and a noticeably **heavier mid-score tail**.
+Fraud transactions cluster between **1–3**, while non-fraud behavior is concentrated around **0–1**.  
+Despite some overlap (expected in real systems), fraud shows a pronounced **right-shift** and heavier mid-score tail.  
+This validates that the combined rule-based signals capture **meaningful anomaly structure** from behavioral patterns.
 
-This confirms that the engineered behavioral signals (mismatch rules, velocity features, mule-like patterns) collectively capture **meaningful anomaly structure**, even on an extremely imbalanced synthetic dataset.
+---
 
 ### 🎯 Precision–Recall Curve (Threshold Evaluation)
 
@@ -215,10 +235,9 @@ This confirms that the engineered behavioral signals (mismatch rules, velocity f
 </p>
 
 **Insight:**  
-Fraud is **extremely rare (0.13%)**, so precision naturally stays low — but the curve still shows a **clear improvement** over a random or flat baseline.  
-The Fraud Signal Score successfully **ranks frauds earlier** as thresholds loosen, producing a curve with real shape instead of noise.
+With fraud occurring only **0.13%** of the time, baseline precision is extremely low — yet the Fraud Signal Score shows **clear ranking power**, producing a meaningful curve instead of noise.  
+While absolute precision is modest (normal for synthetic imbalance), the model demonstrates **strong relative ordering**, enabling better queueing and investigation prioritization in real fraud operations.
 
-While absolute precision remains modest (expected on synthetic imbalance), the model demonstrates **strong relative separation**, validating that the rule-based scoring approach provides **useful prioritization** for downstream fraud operations.
 
 
 
