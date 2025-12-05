@@ -147,29 +147,28 @@ Fraud is often behavioral — not statistical.
 This project focuses on engineering **interpretable, rule-based signals** across four categories:
 
 ### **1. Ledger Mismatch Signals**
-- `origin_mismatch`  
-- `dest_mismatch`  
-- `either_mismatch`  
-- `both_mismatch`  
+- `origin_mismatch` — origin ledger mismatch (1/0)
+- `dest_mismatch` — destination ledger mismatch (1/0)  
+- `either_mismatch` — `origin_mismatch` OR `dest_mismatch`
+- `both_mismatch` — both origin and dest mismatch (1/0)
 
 ### **2. Amount & Balance Anomalies**
-- `log_amount`  
-- `is_high_amount`  
-- `balance_ratio`  
-- `insufficient_funds`  
-- `origin_balance_drain`  
+- `log_amount` — `log(amount + 1)` (float)
+- `is_high_amount` — thresholded high-amount flag (1/0)
+- `balance_ratio` — post-tx balance / pre-tx balance (float)  
+- `insufficient_funds` — flag if balance < amount (1/0) 
+- `origin_drain_by_type` — cumulative drain metric for origin by transaction type. 
 
 ### **3. Velocity Features**
-- Origin velocity counts  
-- Destination velocity counts  
-- `dest_tx_count_step`  
-- Destination bursts  
+- 'orig_tx_count_step' — count of recent outgoing tx from origin (int)
+- 'Dest_tx_count_step' — count of recent incoming tx to destination
+- `dest_tx_count_last3` — count of recent incoming tx to destination in the last 3 consecutive steps
 
 ### **4. Mule Behavior Indicators**
-- `is_pass_through`  
-- `is_many_senders`  
-- High-velocity destinations  
-- First-time receiver indicator  
+- `is_pass_through` — destination immediately forwards funds (1/0)
+- `is_many_senders` — destination receives from many distinct senders (1/0)  
+- 'is_dest_high_velocity' — destination has very high recent inbound velocity (1/0) 
+- `is_new_dest` — first-time receiver indicator (`dest_tx_count_lifetime == 1`) (1/0)
 
 ---
 
