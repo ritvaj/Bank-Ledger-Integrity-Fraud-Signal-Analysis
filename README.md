@@ -8,7 +8,7 @@ Built using Python (NumPy, pandas) to demonstrate how interpretable scoring syst
 
 ---
 
-## 💡 Why This Project?
+## Why This Project?
 
 Fintech payment systems face fast-evolving fraud patterns where attackers exploit behavior — velocity spikes, aggregation bursts, pass-through flows — rather than simple rule violations. Detecting these anomalies early, without relying entirely on costly or opaque ML systems, is a core operational challenge.
 
@@ -18,7 +18,7 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ---
 
- ## 🔄 End-to-End Analysis Pipeline
+ ## End-to-End Analysis Pipeline
  
 [ Raw Transactions ]
         ↓
@@ -61,7 +61,7 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 transaction-behavior-analytics/
 │
@@ -103,7 +103,7 @@ transaction-behavior-analytics/
 
 ```
 
-## 📊 Visual Gallery (EDA)
+## Visual Gallery (EDA)
 
 Exploratory analysis of transaction behavior using engineered features:
 
@@ -121,7 +121,7 @@ _All images are stored in `outputs/figures/`._
 
 ---
 
-## 🧠 Feature Engineering Overview
+## Feature Engineering Overview
 
 Fraud is often behavioral — not statistical.  
 This project focuses on engineering **interpretable, rule-based signals** across four categories:
@@ -152,7 +152,7 @@ This project focuses on engineering **interpretable, rule-based signals** across
 
 ---
 
-## 🔍 Fraud Signal Score (Interpretable Risk Index)
+## Fraud Signal Score (Interpretable Risk Index)
 
 Weighted, rule-based scoring system combining key anomaly features into a single interpretable risk measure.:
 
@@ -185,7 +185,7 @@ The output is a **single behavioral risk score** per transaction.
 
 ---
 
-## 📈 Threshold Evaluation & A/B Testing
+## Threshold Evaluation & A/B Testing
 To operationalize the Fraud Signal Score, we test fraud signal score thresholds 3, 4, 5, 6 to see how well each cutoff separates fraud from normal traffic.
 Each threshold is compared on precision, recall, false-positive rate, lift, and TP/FP/FN/TN.
 
@@ -218,39 +218,39 @@ outputs/tables/top10_high_risk_accounts.csv
 
 ---
 
-## 📊 Model Performance Visuals
+## Model Performance Visuals
 
 The following visuals summarize how the engineered behavioral features translate into risk separation, scoring quality, and threshold performance.
 
 
-### 🔄 Mismatch Rate vs Destination Activity
+### Mismatch Rate vs Destination Activity
 
 <p align="center">
   <img src="outputs/figures/04_Mismatch_Rate_vs_Destination_Activity_Level.png" width="650">
 </p>
 
 
-### 🕵️ Mule Score Density — Fraud vs Non-Fraud
+### Mule Score Density — Fraud vs Non-Fraud
 
 <p align="center">
   <img src="outputs/figures/06_Mule_Score_Fraud_vs_Non_Fraud.png" width="650">
 </p>
 
 
-### 🔐 Fraud Signal Score Distribution — Fraud vs Non-Fraud
+### Fraud Signal Score Distribution — Fraud vs Non-Fraud
 
 <p align="center">
   <img src="outputs/figures/07_FraudScore_fraud_vs_nonfraud.png" width="650">
 </p>
 
 
-### 🎯 Precision–Recall Curve (Threshold Evaluation)
+### Precision–Recall Curve (Threshold Evaluation)
 
 <p align="center">
   <img src="outputs/figures/precision_recall_curve.png" width="650">
 </p>
 
-## 📊 Key Insights
+## Key Insights
 
 ### 1. Behavioral signals clearly separate fraud from normal activity  
 Mismatch rules, velocity spikes, and mule-like aggregation consistently push fraud transactions to higher risk scores — even without ML.
@@ -287,7 +287,7 @@ While absolute precision is modest (normal for synthetic imbalance), the model d
 
 ---
 
-## 🔑 Key Insights
+## Key Insights
 
 - Mismatch + velocity features were the strongest behavioral discriminators.  
 - Mule-behavior features separated fraud and non-fraud distributions cleanly.  
@@ -297,7 +297,7 @@ While absolute precision is modest (normal for synthetic imbalance), the model d
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - Add a lightweight ML model to compare performance with rule-based scoring.  
 - Incorporate temporal drift analysis and rolling-window velocity features.  
