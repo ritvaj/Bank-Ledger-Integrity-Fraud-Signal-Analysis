@@ -18,6 +18,25 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ---
 
+**1. Raw Transactions**
+    ↓
+**2. Cleaning & Preparation**
+    ↓
+**3. Behavioral Feature Engineering**
+   • mismatch signals  
+   • velocity indicators  
+   • balance anomalies  
+   • mule-behavior scoring  
+    ↓
+**4. Exploratory Analytics (EDA)**
+    ↓
+**5. Fraud Signal Score (Rule-Based Model)**
+    ↓
+**6. Threshold Evaluation & A/B Testing**
+    ↓
+**7. Insights & High-Risk Account Detection**
+
+
  ## 🔄 End-to-End Analysis Pipeline
  
 [ Raw Transactions ]
