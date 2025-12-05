@@ -36,12 +36,12 @@ transaction-behavior-analytics/
 ├── python/
 │   ├── etl/
 │   │   └── data_cleaning.py
+│   │   ├── feature_engg_mismatch.py 
+│   │   ├── feature_engineering_behavioral.py        
+        
 │   ├── analysis/
-│   │   ├── feature_engineering_part1.py
-│   │   ├── feature_engineering_part2.py
-│   │   ├── plots_eda.py
-│   │   ├── fraud_signal_model.py
-│   │   └── ab_testing.py
+│   │   ├── _ab_testing.py
+│   │   ├── plots.py
 │   └── README.md
 │
 ├── outputs/
@@ -63,10 +63,8 @@ transaction-behavior-analytics/
 │   │   ├── summary_either_both_mismatch.csv
 │   │   ├── summary_mulescore_distribution.csv
 │   │   ├── threshold_metrics.csv
-│   │   └── top10_high_risk_accounts.csv
-│
-├── assets/
-│   └── (optional banner or project images)
+│   │   ├── ab_test_results.csv
+│   │   └── top10_high_risk_accounts.csv  
 │
 └── README.md
 ```
