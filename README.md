@@ -298,8 +298,31 @@ While absolute precision is modest (normal for synthetic imbalance), the model d
 
 ---
 
+🚀 Future Work
+1. Add a Lightweight ML Baseline
+
+Compare the interpretable Fraud Signal Score with a simple ML model (Logistic Regression / Random Forest) to measure how much additional lift ML provides beyond rule-based scoring.
+
+2. Introduce Temporal & Rolling-Window Features
+
+Add time-aware indicators — time since last transaction, rolling velocity counts, and burst windows — to better capture evolving fraud behavior.
+
+3. Scale to the Full 2M-Row PaySim Dataset
+
+Move beyond the 200k sample and process the full dataset using efficient engines like DuckDB (local SQL over Parquet) or PySpark (distributed).
+Converting data to Parque
+
 ## Future Enhancements
 
+- Add a lightweight ML baseline (Logistic Regression / Random Forest)
+Compare the interpretable Fraud Signal Score with a simple ML model to quantify how much lift ML provides beyond rule-based scoring.
+
+Introduce temporal & rolling-window features
+Add time-based velocity indicators (time since last tx, rolling counts, burst windows) to strengthen anomaly detection and capture evolving fraud behavior.
+
+Scale the analysis to the full 2M-row PaySim dataset
+Move from the 200k sample to the entire dataset using efficient engines like DuckDB (local, fast SQL over Parquet) or PySpark (distributed).
+Converting data to Parquet + running feature engineering in DuckDB is the most practical next step before scaling to Spark if needed.
 - Add a lightweight ML model to compare performance with rule-based scoring.  
 - Incorporate temporal drift analysis and rolling-window velocity features.  
 - Expose a real-time scoring API using FastAPI.  
