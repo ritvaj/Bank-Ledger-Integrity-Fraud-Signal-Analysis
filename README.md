@@ -342,6 +342,7 @@ Converting data to Parquet + performing feature engineering in DuckDB is the mos
   https://seaborn.pydata.org/
 
 
+
 ## 👤 About Me
 
 I’m **Ritvaj Madotra**, a data analyst passionate about using **Python, SQL, and business analytics** to design interpretable, impact-driven solutions.  
