@@ -23,7 +23,7 @@ analysis/
 ## Required Input File
 Place your dataset (PaySim or equivalent) at the project root as:
 
-`Transaction_200kII.csv`
+`Transactions_200kII.csv`
 
 or modify the script paths to match your file name.
 
