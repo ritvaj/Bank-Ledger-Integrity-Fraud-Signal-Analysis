@@ -19,7 +19,7 @@ Alongside the business framing, the project serves as an end-to-end application 
 ---
 
  ## End-to-End Analysis Pipeline
- 
+``` 
 [ Raw Transactions ]
         ↓
 [ Cleaning & Preparation ]
@@ -37,6 +37,7 @@ Alongside the business framing, the project serves as an end-to-end application 
 [ Threshold Evaluation & A/B Testing ]
         ↓
 [ Insights & High-Risk Account Detection ]
+```
 
 ---
 
