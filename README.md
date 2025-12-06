@@ -4,6 +4,7 @@
 <h1 align="center">Transaction Behavior Analytics & Fraud Signal Modeling</h1>
 
 A dynamic fraud-detection scoring system built on 200,000 PaySim transactions, using Python (pandas, NumPy) to identify behavioral risk signals, anomaly pathways, and actionable detection thresholds. 
+
 The project evaluates how interpretable, rule-driven scoring can support fast, cost-efficient fraud operations before introducing machine-learning models.
 
 ---
