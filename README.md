@@ -67,8 +67,8 @@ Alongside the business framing, the project serves as an end-to-end application 
 ## 🎯 Objectives
 
 - Understand transaction behavior at scale and map patterns linked to fraud signals.  
-- Engineer interpretable features (mismatch signals, velocity rules, mule behaviors, balance anomalies).  
-- Build a **Fraud Signal Score** — a weighted, interpretable risk index.  
+- Engineer interpretable features (mismatch signals, velocity rules, mule behaviors, balance anomalies) and check how each feature can accurately flag transactions.  
+- Build a **Fraud Signal Score** — a weighted calculated score using multiple features that are good indicators of fraud transactions, interpretable risk index .  
 - Evaluate multiple thresholds using precision, recall, lift, and false-positive behavior.  
 - Identify high-risk accounts and transaction patterns for further investigation.
 
