@@ -20,7 +20,7 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ---
 
- ## End-to-End Analysis Pipeline
+ ## End-to-End Analysis Workflow
 
 ```
 ┌──────────────────────────────────────────┐
