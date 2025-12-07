@@ -333,14 +333,8 @@ Converting data to Parquet + performing feature engineering in DuckDB is the mos
 - **pandas Documentation** — Data manipulation and feature engineering  
   https://pandas.pydata.org/docs/
 
-- **NumPy Documentation** — Numerical computing and vectorized operations  
-  https://numpy.org/doc/
-
 - **Matplotlib Documentation** — Plotting and visualization  
   https://matplotlib.org/stable/contents.html
-
-- **Seaborn Documentation** — Statistical visualizations  
-  https://seaborn.pydata.org/
 
 
 
