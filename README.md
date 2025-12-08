@@ -140,7 +140,8 @@ Exploratory analysis of transaction behavior using engineered features:
 6. **Mule Score Density (Fraud vs Non-Fraud)**  
 7. **Fraud Signal Score Distribution**  
 
-A Precision–Recall Curve is shown later under model evaluation.
+Threshold model evaluation:
+1. **Precision-Recall Curve** 
 
 _All images are stored in `outputs/figures/`._
 
