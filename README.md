@@ -309,7 +309,7 @@ Even so, engineered rules still surface meaningful behavior patterns, showing ho
 Compare this dynamic fraud detection model using a **Fraud Signal Score** with a simple ML model (Logistic Regression / Random Forest) to measure how much additional precision and lift ML provides beyond rule-based scoring.
 
 ### **2. Introduce Temporal & Rolling-Window Features**  
-Add time-aware indicators — time since last transaction, rolling velocity counts, and burst windows — to better capture evolving fraud behavior.
+Add time-aware indicators like time since last transaction, rolling velocity counts, and burst windows that will help to better capture real-world evolving fraud behavior.
 
 ### **3. Scale to the Full 2M-Row PaySim Dataset**  
 Move beyond the 200k sample and process the full dataset using efficient engines like **DuckDB** (local SQL over Parquet) or **PySpark** (distributed).  
