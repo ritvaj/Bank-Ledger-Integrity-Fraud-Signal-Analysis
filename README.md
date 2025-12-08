@@ -127,7 +127,7 @@ transaction-behavior-analytics/
 
 ---
 
-## Exploratory Analysis (Visual Gallery)
+## Visual Gallery (Exploratory Analysis)
 
 Exploratory analysis of transaction behavior using engineered features:
 
@@ -180,7 +180,8 @@ This project focuses on engineering **interpretable, rule-based signals** across
 
 ## Model Performance Visuals
 
-The following visuals summarize how the engineered behavioral features translate into risk separation, scoring quality, and threshold performance. To go through all the visuals go to:
+The following visuals summarize how the engineered behavioral features translate into risk separation, scoring quality, and threshold performance. 
+To go through all the visuals go to:
 [outputs/figures](outputs/figures)
 
 
@@ -274,8 +275,8 @@ The **Precision–Recall Curve** shows that even with only baseline 0.13% fraud 
   <img src="outputs/figures/precision_recall_curve.png" width="650">
 </p>
 
-The table below shows the evaluation results
-Result table - [threshold_evaluation_results.csv](outputs/tables/threshold_evaluation_results.csv)
+The table below shows the evaluation results:
+[threshold_evaluation_results.csv](outputs/tables/threshold_evaluation_results.csv)
 
 
 ### Top 10 high-risk accounts (based on cumulative score):
