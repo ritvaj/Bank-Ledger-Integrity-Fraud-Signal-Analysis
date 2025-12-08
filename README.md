@@ -288,29 +288,22 @@ Table provided in:
 
 ---
 
-
----
-
 ### ⚠️ Dataset Context (to set expectations)
 
-PaySim is synthetic and extremely imbalanced:  
+PaySim is synthetic and extremely imbalanced. As mentioned in the dataset overview, it injects artificial fraud patterns into simulated mobile-money logs, rather than capturing real attacker behaviour.
+It also cancels fraud transactions by design, which breaks real balance dynamics and making features like old/new balances unusable for genuine fraud detection. In a nutshell:
 - Fraud = **0.13%**  
-- Many fraud patterns are semi-random  
+- Many fraud patterns are injected into the dataset and hence are semi-random  
 - Merchant/receiver roles aren't fully realistic  
 
 Even so, engineered rules still surface meaningful behavior patterns, showing how far **interpretable, low-cost** scoring can go before ML is needed.
-
-
-**Insight:**  
-With fraud occurring only **0.13%** of the time, baseline precision is extremely low — yet the Fraud Signal Score shows **clear ranking power**, producing a meaningful curve instead of noise.  
-While absolute precision is modest (normal for synthetic imbalance), the model demonstrates **strong relative ordering**, enabling better queueing and investigation prioritization in real fraud operations.
 
 ---
 
 ## Future Work
 
 ### **1. Add a Lightweight ML Baseline**  
-Compare the interpretable **Fraud Signal Score** with a simple ML model (Logistic Regression / Random Forest) to measure how much additional lift ML provides beyond rule-based scoring.
+Compare this dynamic fraud detection model using a **Fraud Signal Score** with a simple ML model (Logistic Regression / Random Forest) to measure how much additional precision and lift ML provides beyond rule-based scoring.
 
 ### **2. Introduce Temporal & Rolling-Window Features**  
 Add time-aware indicators — time since last transaction, rolling velocity counts, and burst windows — to better capture evolving fraud behavior.
