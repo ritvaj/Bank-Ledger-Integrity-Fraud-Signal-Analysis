@@ -127,7 +127,7 @@ transaction-behavior-analytics/
 
 ---
 
-## Visual Gallery (EDA)
+## Exploratory Analysis (Visual Gallery)
 
 Exploratory analysis of transaction behavior using engineered features:
 
