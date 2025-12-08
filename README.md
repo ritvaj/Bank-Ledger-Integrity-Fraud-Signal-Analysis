@@ -53,7 +53,7 @@ Alongside the business framing, the project serves as an end-to-end application 
                      │
                      ▼
 ┌──────────────────────────────────────────┐
-│    A/B Testing & Threshold Evaluation    │
+│          Threshold Evaluation            │
 └──────────────────────────────────────────┘
                      │
                      ▼
@@ -76,11 +76,11 @@ Alongside the business framing, the project serves as an end-to-end application 
 
 ## 🛠 Tools & Skills Applied
 
-- **Python (NumPy, pandas):** Data cleaning, feature engineering, and anomaly rule construction  
-- **Matplotlib & Seaborn:** Behavioral visualizations, density plots, threshold curves  
-- **VS Code:** End-to-end script development (ETL → features → EDA → model evaluation)
+- **Visual Studio Code:** End-to-end script development (ETL → features → EDA → model evaluation)
+- **Python (pandas, NumPy):** Data cleaning, feature engineering, anomaly rule construction, and threshold evaluation
+- **Feature Engineering:** Velocity rules, mismatch patterns, balance signals, mule behavior indicators
 - **Data Modeling:** Transaction behavior segmentation, risk-signal construction  
-- **Feature Engineering:** Velocity rules, mismatch patterns, balance signals, mule behavior indicators  
+- **Matplotlib & Seaborn:** Behavioral visualizations, density plots, threshold curves  
 - **Fraud Analytics:** Threshold testing, precision–recall evaluation, high-risk account identification
 
 ---
