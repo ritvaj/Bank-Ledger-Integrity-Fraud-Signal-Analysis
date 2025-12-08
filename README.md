@@ -148,7 +148,7 @@ _All images are stored in `outputs/figures/`._
 
 ## Feature Engineering Overview
 
-Fraud is often behavioral — not statistical.  
+Fraud is often behavioral, not statistical.  
 This project focuses on engineering **interpretable, rule-based signals** across four categories and testing whether they are good individual indicators of actual fraud. The important features are shown as below:
 
 ### **1. Ledger Mismatch Signals**
@@ -209,7 +209,7 @@ To go through all the visuals go to:
 ## Key Insights
 
 ### 1. Destination-side activity exposes abnormal behavior  
-Mismatch rates jump when receivers get multiple inbound payments in short windows — a classic mule consolidation pattern.
+Mismatch rates jump when receivers get multiple inbound payments in short windows which is a classic mule consolidation pattern.
 
 ### 2. Behavioral signals clearly separate fraud from normal activity  
 Mismatch rules, velocity spikes, and mule-like aggregation consistently push fraud transactions to higher risk scores even without ML.
