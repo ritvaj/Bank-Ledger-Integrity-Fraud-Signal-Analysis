@@ -216,9 +216,7 @@ These behaviors are rare in normal users → high-value operational flags.
 ### 3. Destination-side activity exposes abnormal behavior  
 Mismatch rates jump when receivers get multiple inbound payments in short windows — a classic mule consolidation pattern.
 
-### 4. Rule-based scoring improves detection efficiently  
-With only **0.13% fraud**, precision stays low (expected), but the rule-based Fraud Signal Score still ranks fraud earlier, improves recall, and gives lift over random checks.  
-This makes it useful for **queue triage and ops cost reduction** before introducing ML.
+
 
 ### 5. A small cluster of accounts drives most risk  
 Cumulative scores highlight a tiny group of accounts repeatedly triggering anomalies — ideal for targeted investigation.
@@ -272,13 +270,14 @@ For each threshold, the following were calculated:
 - Fraud rate among flagged transactions  
 - TP / FP / FN / TN counts  
 
-A **Precision–Recall Curve** visualizes the trade-off under class imbalance and the table below show the evaluation results:
+The **Precision–Recall Curve** shows that even with only baseline 0.13% fraud (precision will be low), the rule-based score ranks risky accounts earlier and provides lift over random checks. This helps prioritize reviews more efficiently before adding machine learning.
 
 <p align="center">
   <img src="outputs/figures/precision_recall_curve.png" width="650">
 </p>
 
-- [threshold_evaluation_results.csv](outputs/tables/threshold_evaluation_results.csv)
+The table below shows the evaluation results
+Result table - [threshold_evaluation_results.csv](outputs/tables/threshold_evaluation_results.csv)
 
 
 ### Top 10 high-risk accounts (based on cumulative score):
